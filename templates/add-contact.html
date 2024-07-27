@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block head%}
+
+{% endblock %}
+{% block body %}
+<div id="spinner-container">
+    <div class="loader"></div>
+</div>
+<div class="add-contact">
+    <div class="avatar">
+    <img src="../static/imgs/Avatar.png" alt="" width="100px" height="100px">
+    <h2>Welcome 👏</h2>
+    </div>
+    <div class="addcontact-detalis">
+        <div class="add-heading">
+            <h2>Add Contact Details</h2>
+        </div>
+        <form class="form" method="post">
+            <label for="">Full Name</label>
+            <input type="text"  class="add-name" placeholder="first_name-last_name">
+            <label for="">email</label>
+            <input type="text"  class="add-mail" placeholder="example@gmail.com">
+            <label for="">Telephone</label>
+            <input type="text" class="add-phone">
+            <button class="adding-button">submit</button>
+            <a href="/contact-list" class="back_list">Back to contact-list</a>
+        </form>
+    </div>
+</div>
+<script src="../static/js/add-contac.js"></script>
+
+{% endblock %}

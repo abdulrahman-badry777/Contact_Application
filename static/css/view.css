@@ -1,0 +1,257 @@
+/* Basic styling for contact details page */
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.view-details {
+    position: relative;
+    width: 1400px;
+    min-height: 600px;
+    background-color: #F8F8F8;
+    margin: 20px auto;
+    font-family: "Poppins";
+    transition: all 1.5s linear;
+}
+
+@media (max-width: 1020px) {
+    .view-details {
+        width: 1000px;
+    }
+}
+
+@media (max-width: 850px) {
+    .view-details {
+        width: 750px;
+    }
+}
+
+.edit-toggle {
+    margin-top: 20px;
+}
+
+.view-details .avatar {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    display: flex;
+    align-items: center;
+    transform: translate(-50%, 0%);
+    background-color: #F8F8F8;
+    gap: 15px;
+    width: max-content;
+    justify-content: space-between;
+    transition: all 1.5s linear;
+}
+
+.view-details .avatar img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-right: 35px;
+}
+
+.view-details .avatar h2 {
+    font-family: "Poppins";
+    font-weight: 700;
+    font-size: 32px;
+}
+
+.view-details .contact-detalis {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    min-height: 300px;
+    background-color: #F8F8F8;
+    margin-top: 50px;
+}
+
+@media (max-width: 950px) {
+    .view-details {
+        width: 650px;
+    }
+
+    .view-details .avatar {
+        width: 650px;
+    }
+
+    .view-details .contact-detalis {
+        width: 650px;
+    }
+}
+
+@media (max-width: 650px) {
+    .view-details {
+        width: 450px;
+    }
+
+    .view-details .avatar {
+        width: 450px;
+    }
+
+    .view-details .contact-detalis {
+        width: 450px;
+    }
+}
+
+@media (max-width: 450px) {
+    .view-details {
+        width: 350px;
+        padding: 15px;
+    }
+
+    .view-details .avatar {
+        width: fit-content;
+    }
+
+    .view-details .avatar h2 {
+        font-size: 22px;
+    }
+
+    .view-details .contact-detalis {
+        width: 350px;
+    }
+
+    .view-details .contact-detalis .heading {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+.view-details .contact-detalis .details {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    margin-left: 30px;
+}
+
+.view-details .contact-detalis .details p {
+    font-family: "Poppins";
+    font-size: 14px;
+    margin-bottom: 7px;
+    font-weight: 500;
+}
+
+.view-details .contact-detalis .details p strong {
+    font-family: "Poppins";
+    font-size: 14px;
+    margin-bottom: 7px;
+    font-weight: 500;
+    display: block;
+}
+
+.view-details .contact-detalis .details p input {
+    width: 283px;
+    height: 41.3px;
+    border-radius: 12px;
+    border: 1px solid #C4C4C4;
+    outline: none;
+    color: #636364;
+    padding-left: 15px;
+    box-shadow: 0px 4px 4px 0px rgb(0, 0, 0, 25%);
+    display: block;
+    background-color: white;
+}
+
+.view-details .contact-detalis .edit-toggle {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 19px;
+    margin-bottom: 10px;
+}
+
+.view-details .contact-detalis .edit-toggle #editToggle {
+    width: 45px;
+    height: 3px;
+    background-color: #ccc;
+    position: relative;
+    padding: 15px;
+    border-radius: 16px;
+    transition: all 0.5s linear;
+}
+
+.view-details .contact-detalis .edit-toggle #editToggle.clicked {
+    background-color: #2196F3;
+}
+
+.view-details .contact-detalis .edit-toggle #editToggle span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: white;
+    transition: all 0.3s linear;
+}
+
+.view-details .contact-detalis .edit-toggle #editToggle span.move {
+    left: 45px;
+}
+
+.view-details .contact-detalis .edit-toggle label {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.view-details .contact-detalis button {
+    width: 286px;
+    height: 41.6px;
+    border-radius: 12px;
+    background-color: #009688;
+    color: white;
+    box-shadow: 0px 4px 10px 0px rgb(233, 68, 75, 25%);
+    border: none;
+    font-family: "Poppins";
+    font-size: 14px;
+    font-weight: normal;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin-bottom: 22px;
+}
+
+/* Additional styling as needed */
+#spinner-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(203, 203, 203, 0.625); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Spinner animation */
+.loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    width: 120px;
+    height: 120px;
+    animation: spin 1s linear infinite;
+}
+
+/* Keyframes for spinner animation */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

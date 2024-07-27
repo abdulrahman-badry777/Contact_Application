@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<div id="spinner-container">
+    <div class="loader"></div>
+</div>
+<div class="view-details">
+    <div class="avatar">
+        <img src="../static/imgs/Avatar.png" alt="" width="100px" height="100px">
+        <h2>Welcome 👏</h2>
+    </div>
+    <div class="contact-detalis">
+        <div class="heading">
+            <h2>View Contact Details</h2>
+        </div>
+        <form id="contactForm" method="post">
+            <div class="details">
+                <p><strong>Name:</strong> <input type="text" id="contactName" name="name" readonly></p>
+                <p><strong>Email:</strong> <input type="email" id="contactEmail" name="email" readonly></p>
+                <p><strong>Phone:</strong> <input type="text" id="contactPhone" name="phone_number" readonly></p>
+            </div>
+            <div class="edit-toggle">
+                <label for="editToggle">Enable Edit</label>
+                <div id="editToggle">
+                    <span class="circle"></span>
+                </div>
+            </div>
+            <button id="saveButton" style="display:none;">Save Changes</button>
+        </form>
+    </div>
+</div>
+<script src="../static/js/contact-list.js"></script>
+{% endblock %}
